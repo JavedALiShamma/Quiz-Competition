@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="Quiz.css">
+    <link rel="stylesheet" href="Quizarea.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <meta charset="UTF-8">
@@ -10,7 +11,8 @@
     <title>Document</title>
 </head>
 <body>
-   <nav class=" head_nav d-flex align-items-center">
+    <main class="real-main">
+   <nav id="index-page" class=" head_nav d-flex align-items-center">
     <img class="py-3 px-3" src="QuizGrad.png" alt=" Quiz Grad">
     <div class="head_anchorTags">
         <a class="px-5" href=""> How it works</a>
@@ -20,6 +22,7 @@
     </div>
    </nav>
    <div class="hero d-flex">
+    
     <div class="popUp_main pop_off">
     <div class="pop_up">
         <span class="material-symbols-outlined">
@@ -28,18 +31,18 @@
         <h1 class="display-4"> Choose your favorite topic</h1>
         <p> Select more than 5 topics to start Quiz</p>
         <div class="topics d-flex">
-            <button id="Science" class="btn1"> Science</button>
-            <button id="Maths" class="btn1"> Maths</button>
-            <button id="English" class="btn1"> Englis</button>
-            <button id="Hindi" class="btn1"> Hindi </button>
-            <button id="Coding" class="btn1"> Coding</button>
-            <button id="JavaScrip" class="btn1"> JavaScript</button>
-            <button id="Enviornment" class="btn1"> Enviornment</button>
-            <button id="Cricket" class="btn1"> Cricket</button>
-            <button id="Art" class="btn1"> Art</button>
+            <button id="Indian Festivals" class="btn1"> Indian Festivals</button>
+            <button id="Economics and Finance" class="btn1"> Economics and Finance</button>
+            <button id="Leonardo da Vinci" class="btn1"> Leonardo da Vinci</button>
+            <button id="Art and Culture" class="btn1"> Art and Culture </button>
+            <button id="Indian Independence Movement" class="btn1"> Indian Independence Movement</button>
+            <button id="Indian Architecture" class="btn1"> Indian Architecture</button>
+            <button id="Indian Cinema" class="btn1"> Indian Cinema</button>
+            <button id="Indian Mythology" class="btn1"> Indian Mythology</button>
+            <button id="Indian Cuisine" class="btn1"> Indian Cuisine</button>
         </div>
-        <button class="start_quiz"> Start Quiz</button>
-    </div>
+        <button onclick="startQuiz()"  class="start_quiz mx-5 cursor"> Start Quiz</button>
+    </div> 
 </div>
     <div class="hero_left px-2">
         <div class="left_heading">
@@ -55,6 +58,34 @@
        
     </div>
    </div>
+</main>
+   <main id="startingQuiz" class="display-off">
+    <nav class=" head_nav1 d-flex align-items-center">
+        <img class="py-3 px-3" src="QuizGrad.png" alt=" Quiz Grad">
+        <div class="head_anchorTags1">
+            <a class="howitworks" href=""> How it works?</a>
+            <a class="feature" href=""> Features</a>
+            <a class="aboutus" href=""> About Us</a>
+        </div>
+        <button class="logged_inBtn"> <span class="material-symbols-outlined">person</span> tarun<span class="material-symbols-outlined">arrow_drop_down</span></button>
+       </nav>
+       <div class="question_mainDiv">
+        <div class="question_section my-5"><p class=" px-4 py-4 question"> Here will have your question which will have more than one options</p></div>
+        <div class="answer_section">
+            <button class="option" id="optionA">A<p class="insert-option"></p></button>
+            <button class="option" id="optionB">B<p class="insert-option"></p></button>
+            <button class="option" id="optionC">C<p class="insert-option"></p></button>
+            <button class="option" id="optionD">D<p class="insert-option"></p></button>
+        </div>
+    </div>
+    <div class="footer">
+        <button onclick="document.location='index.html'" class="previous"><span class="material-symbols-outlined">arrow_back</span></span>pervious</button>
+        <button onclick="getQuestion()" class="Next">Next<span class="material-symbols-outlined">chevron_right</span></button>
+        <button class="Skip">Skip<span class="material-symbols-outlined">
+            keyboard_double_arrow_right
+            </span></button>
+    </div>
+</main>
 
 
 
